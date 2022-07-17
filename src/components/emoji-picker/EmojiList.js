@@ -1,5 +1,5 @@
 import styles from "./EmojiPicker.module.scss";
 
 export default function EmojiList({ children }) {
-  return <div className={styles.emojisList}>{children}</div>;
+  return <div className={styles.emojiList}>{children}</div>;
 }

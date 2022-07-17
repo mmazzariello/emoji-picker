@@ -52,10 +52,12 @@ export function EmojiPicker(props, inputRef) {
   };
 
   return (
-    <div ref={containerRef}>
-      <button onClick={handleClickOpen}>😊</button>
+    <div ref={containerRef} className={styles.inputContainer}>
+      <button className={styles.emojiPickerButton} onClick={handleClickOpen}>
+        😊
+      </button>
       {isOpen ? (
-        <div>
+        <div className={styles.emojiPickerContainer}>
           <EmojiSearch onSearch={handleSearch} />
           <EmojiList>
             {emojis.map((emoji) => (

@@ -1,17 +1,13 @@
 import { useRef } from "react";
 import EmojiPicker from "./EmojiPicker";
+import styles from "./EmojiPicker.module.scss";
 
 const EmojiPickerInput = () => {
   const refInput = useRef(null);
 
-  // const handleClick = () => {
-  //   refInput.current.focus();
-  // }
-
   return (
-    <div>
+    <div className={styles.inputContainer}>
       <input ref={refInput} />
-      {/* <button onClick={handleClick}>Click</button> */}
       <EmojiPicker ref={refInput} />
     </div>
   );
